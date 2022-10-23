@@ -1,19 +1,22 @@
-#include <stdio.h>
-
-int		my_compute_factorial_it(int nb)
+/*
+** EPITECH PROJECT, 2022
+** MY_COMPUTE_FACTORIAL_IT
+** File description:
+** No file there, just an epitech header example.
+** You can even have multiple lines if you want!
+*/
+int my_compute_factorial_it (int nb)
 {
-	int i;
-	int result;
-
-	i = nb;
-	result = 1;
-	if (nb == 0 || nb == 1)
-		return (1);
-
-	while (i > 1)
-	{
-		result = result * i;
-		i--;
-	}
-	return (result);
+    int total = 1;
+    if (nb < 0 || nb > 12) {
+        return 0;
+    }
+    if (nb == 0) {
+        return 1;
+    }
+    while (nb > 1) {
+        total = total * nb;
+        nb--;
+    }
+    return total;
 }
